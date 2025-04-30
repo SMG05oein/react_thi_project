@@ -1,0 +1,31 @@
+.topMenuOne{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.topMenuOne a{
+    margin-left: 20px;
+}
+.topMenuTwo{
+    display: flex;
+    justify-content: center;
+}
+.topMenuTwo img{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.topMenuThr{
+    display: flex;
+    justify-content: center;
+}
+
+.topMenuThr ul{
+    display: flex;
+    list-style: none;
+}
+
+.topMenuThr li{
+    padding: 10px;
+}
