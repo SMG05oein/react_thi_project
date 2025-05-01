@@ -5,6 +5,7 @@
 }
 .topMenuOne a{
     margin-left: 20px;
+    margin-right: 20px;
 }
 .topMenuTwo{
     display: flex;
@@ -29,3 +30,22 @@
 .topMenuThr li{
     padding: 10px;
 }
+
+.search{
+    display: flex;
+    align-items: center;
+    /*margin-top: 20px;*/
+    margin-bottom: 15px;
+}
+
+.search input{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+}
+

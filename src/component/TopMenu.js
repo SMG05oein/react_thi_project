@@ -2,6 +2,10 @@ import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUserCircle} from "@fortawesome/free-regular-svg-icons";
 import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 const TopMenu = () => {
     const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M Home', 'Sale', '지속가능성'];
@@ -11,7 +15,7 @@ const TopMenu = () => {
         <div>
             {/**Start login*/}
             <div className="topMenuOne">
-                <FontAwesomeIcon icon={faUserCircle} /><a>로그인</a>
+                <FontAwesomeIcon icon={faUserCircle} /><a href={"login"}>로그인</a>
             </div>
             {/**End login*/}
             {/**Start logo*/}
@@ -25,10 +29,10 @@ const TopMenu = () => {
                     {menuList.map(menu =><li>{menu}</li>)}
                 </ul>
 
-                <div>
+                <div className={"search"}>
                     <FontAwesomeIcon icon={faSearch}/>
-                    <input type={"text"}></input>
-                    <button></button>
+                    <input placeholder={"검색어를 입력해주세요"} type={"text"}></input>
+                    <Button variant={"outline-info"}>검색</Button>
                 </div>
             </div>
             {/**End TopMenu*/}
