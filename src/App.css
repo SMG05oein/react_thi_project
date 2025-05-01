@@ -19,12 +19,16 @@
 
 .topMenuThr{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .topMenuThr ul{
     display: flex;
     list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .topMenuThr li{
@@ -32,10 +36,10 @@
 }
 
 .search{
+    margin-left: auto;
     display: flex;
     align-items: center;
-    /*margin-top: 20px;*/
-    margin-bottom: 15px;
+    margin-top: 25px;
 }
 
 .search input{
@@ -49,3 +53,15 @@
     background-color: rgb(233, 233, 233);
 }
 
+.Card{
+    background-color: white;
+}
+
+.Card img{
+    width: 100%;
+}
+
+.Card:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
