@@ -3,8 +3,9 @@
     justify-content: flex-end;
     margin-top: 20px;
 }
-.topMenuOne a{
-    margin-left: 20px;
+.topMenuOne div{
+    cursor: pointer;
+    margin-left: 10px;
     margin-right: 20px;
 }
 .topMenuTwo{
