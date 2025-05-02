@@ -10,8 +10,9 @@ const ProductAll = () => {
 
     const getProducts = async () =>{
         let getQuery = query.get('q') || "";
-        console.log("쿼리값은 ", getQuery);
-        let url = `http://localhost:5000/products?q=${getQuery}`;
+        // console.log("쿼리값은 ", getQuery);
+        let url = `http://localhost:5000/products?q=${(getQuery)}`;
+        console.log(url);
         let response = await fetch(url);
         let data = await response.json();
         setProductList(data);

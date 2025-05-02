@@ -24,7 +24,7 @@ const TopMenu = ({auth}) => {
         if(event.key === "Enter"){
             let key = event.target.value;
             // console.log(key);
-            navigate(`/?q=${key}`);
+            navigate(`/?q=${encodeURIComponent(key)}`);
         }
     }
 
