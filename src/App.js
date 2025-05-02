@@ -19,7 +19,7 @@ function App() {
             <TopMenu auth={auth}/>
             <Routes>
                 <Route path={"/"} element={<ProductAll/>}/>
-                <Route path={"/login"} element={<Login setAuth={setAuth}/>}/>
+                <Route path={"/login"} element={<Login setAuth={setAuth} auth={auth}/>}/>
                 <Route path={"/productView/:id"} element={<PrivateRoute auth={auth}/>}/>
             </Routes>
         </div>

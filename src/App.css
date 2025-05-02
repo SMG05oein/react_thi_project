@@ -13,6 +13,7 @@
     justify-content: center;
 }
 .topMenuTwo img{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     width: 100px;

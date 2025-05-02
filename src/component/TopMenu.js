@@ -14,7 +14,11 @@ const TopMenu = ({auth}) => {
 
     const navigate = useNavigate();
     const goToLogin=()=>{
-        navigate("/login");
+        if(auth === true){
+            if(window.confirm("로그아웃 하시겠습니까?")){
+                navigate("/login?idx=1");
+            }
+        }else navigate("/login");
     }
     const goToHome=()=>{
         navigate("/");
