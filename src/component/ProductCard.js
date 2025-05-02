@@ -10,9 +10,9 @@ const ProductCard = ({item}) => {
     return (
         <div className={"Card"} onClick={showView}>
             <img src={item ? item.img : null} alt={""}/>
-            <div>{item.choice === true ? "Conscious choice" : ""}</div>
+            <div>{item.choice === true ? "Conscious choice" : null}</div>
             <div>{item ? item.title : null}</div>
-            <div>{item ? item.price : null}</div>
+            <div>{item ? item.price : null}원</div>
             <div>{item.new ? "신제품" : ""}</div>
         </div>
     );

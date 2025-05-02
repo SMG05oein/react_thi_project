@@ -10,6 +10,9 @@ const ProductView = () => {
     const navigate = useNavigate()
     const [product, setProduct] = useState([])
     const [size, setSize] = useState([]);
+    const [selectedSize, setSelectedSize] = useState("사이즈를 선택하시오");
+
+
     const getProductView= async ()=>{
         let url = `http://localhost:5000/products/${id}`
         let response = await fetch(url);
@@ -38,11 +41,14 @@ const ProductView = () => {
                     <div className={"viewChoice"}>{product.choice? "Conscious choice": null}</div>
 
                     <Dropdown>
-                        <Dropdown.Toggle variant="success" id="dropdown-basic">
-                            사이즈 선택
+                        <Dropdown.Toggle style={{minWidth: "100px"}} variant="success" id="dropdown-basic">
+                            {selectedSize}
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                            {size.map((size) => (<Dropdown.Item>{size}</Dropdown.Item>))}
+                            {size.map((size) => (
+                                <Dropdown.Item key={`${size}`} onClick={()=>setSelectedSize(size)}>
+                                    {size}
+                                </Dropdown.Item>))}
                         </Dropdown.Menu>
                     </Dropdown>
 

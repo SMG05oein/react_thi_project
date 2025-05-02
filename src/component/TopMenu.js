@@ -20,6 +20,14 @@ const TopMenu = ({auth}) => {
         navigate("/");
     }
 
+    const search=(event)=>{
+        if(event.key === "Enter"){
+            let key = event.target.value;
+            // console.log(key);
+            navigate(`/?q=${key}`);
+        }
+    }
+
     return (
         <div>
             {/**Start login*/}
@@ -41,8 +49,7 @@ const TopMenu = ({auth}) => {
 
                 <div className={"search"}>
                     <FontAwesomeIcon icon={faSearch}/>
-                    <input placeholder={"검색어를 입력해주세요"} type={"text"}></input>
-                    <Button variant={"outline-info"}>검색</Button>
+                    <input placeholder={"검색어를 입력해주세요"} type={"text"} onKeyPress={(event)=>search(event)}></input>
                 </div>
             </div>
             {/**End TopMenu*/}
