@@ -11,7 +11,7 @@ const ProductAll = () => {
     const getProducts = async () =>{
         let getQuery = query.get('q') || "";
         // console.log("쿼리값은 ", getQuery);
-        let url = `https://my-json-server.typicode.com/SMG05eoin/react_thi_project/products?q=${getQuery}`;
+        let url = `https://my-json-server.typicode.com/SMG05oein/react_thi_project/products?q=${getQuery}`;
         console.log(url);
         let response = await fetch(url);
         let data = await response.json();
