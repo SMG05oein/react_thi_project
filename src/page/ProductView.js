@@ -14,7 +14,7 @@ const ProductView = () => {
 
 
     const getProductView= async ()=>{
-        let url = `https://my-json-server.typicode.com/SMG05eoin/react_thi_project/${id}`
+        let url = `https://my-json-server.typicode.com/SMG05eoin/react_thi_project/products/${id}`
         let response = await fetch(url);
         let data = await response.json();
         console.log(data);
