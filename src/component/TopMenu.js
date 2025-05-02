@@ -16,6 +16,9 @@ const TopMenu = ({auth}) => {
     const goToLogin=()=>{
         navigate("/login");
     }
+    const goToHome=()=>{
+        navigate("/");
+    }
 
     return (
         <div>
@@ -27,7 +30,7 @@ const TopMenu = ({auth}) => {
             {/**End login*/}
             {/**Start logo*/}
             <div className="topMenuTwo">
-                <img src={url} />
+                <img onClick={goToHome} src={url} />
             </div>
             {/**End logo*/}
             {/**Start TopMenu*/}
