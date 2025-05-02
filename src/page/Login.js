@@ -11,6 +11,10 @@ const Login = ({setAuth}) => {
         navigate("/");
     }
 
+    const goToBack = (event) => {
+        event.preventDefault();
+        navigate("/");
+    }
     return (
         <Container>
             <Form onSubmit={(event)=>loginUser(event)}>
@@ -31,6 +35,9 @@ const Login = ({setAuth}) => {
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     로그인
+                </Button>
+                <Button onClick={(event)=>goToBack(event)} style={{marginLeft: "10px"}} variant="primary" type="submit">
+                    이전
                 </Button>
             </Form>
         </Container>

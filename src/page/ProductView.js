@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {Col, Container, Dropdown, Row} from "react-bootstrap";
 import {getElement} from "bootstrap/js/src/util";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 const ProductView = () => {
 
     let {id} = useParams()
-
+    const navigate = useNavigate()
     const [product, setProduct] = useState([])
     const [size, setSize] = useState([]);
     const getProductView= async ()=>{
@@ -22,8 +22,8 @@ const ProductView = () => {
         getProductView();
     },[])
 
-    const CB =()=> { //Check Button
-        alert("추가 되었습니다!!\n\n\n사실 추가 안 됨;;");
+    const CB =(q)=> { //Check Button
+        q === 1 ? navigate("/") : alert("추가 되었습니다!!\n\n\n사실 추가 안 됨;;");
     }
 
     return (
@@ -46,7 +46,14 @@ const ProductView = () => {
                         </Dropdown.Menu>
                     </Dropdown>
 
-                    <Button variant={"dark"} style={{marginTop: "10px", width: "100%"}} onClick={CB}>추가</Button>
+                    <Row>
+                        <Col lg={6}>
+                            <Button variant={"dark"} style={{marginTop: "10px", width: "100%"}} onClick={CB}>추가</Button>
+                        </Col>
+                        <Col lg={6}>
+                            <Button variant={"primary"} style={{marginTop: "10px", width: "100%"}} onClick={(q)=>CB(1)}>이전</Button>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>
